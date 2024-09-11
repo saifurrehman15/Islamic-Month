@@ -1,4 +1,3 @@
-
 import moment from "moment-hijri";
 import Events from "./eventBox";
 
@@ -15,6 +14,7 @@ function TableCells({
 }) {
   const currentHijriDate = moment(); // Get current Islamic date
   const currentYear = currentHijriDate.iYear(); // Get current Islamic year
+  const currentDate = currentHijriDate.iDate();
 
   const rows = [];
   let cells = [];
@@ -36,8 +36,7 @@ function TableCells({
 
   for (let day = 1; day <= daysInMonth; day++) {
     const isToday =
-      day === currentHijriDate.iDate() &&
-      selectedMonth === currentHijriDate.iMonth();
+      day === currentDate && selectedMonth === currentHijriDate.iMonth();
 
     // Calculate the Gregorian date for this Hijri day
     const gregorianDate = moment()
@@ -55,8 +54,9 @@ function TableCells({
         key={`day-${day}`}
         className="calendar-cell relative rounded cursor-pointer"
         style={{
-          background: isToday ? "" : "",
-          color: isToday ? "#fff" : "",
+          background: isToday ? "skyblue" : "",
+          border: isToday ? "2px solid #4caf50" : "",
+          color: isToday ? "#000" : "",
           position: "relative",
         }}
         onClick={() => {
@@ -78,10 +78,11 @@ function TableCells({
 
         <div className="flex flex-col w-full">
           <div className="flex justify-around flex-col">
-            <span className="text-gray-500 font-bold mt-2">
+            <span className={isToday ? "text-black" : "text-gray-500 font-bold mt-2"}>
               {gregorianDate} {/* Gregorian date */}
             </span>
-            <span className="text-blue-400">{day}</span> {/* Islamic date */}
+            <span className={isToday ? "" : "text-blue-400"}>{day}</span>{" "}
+            {/* Islamic date */}
           </div>
         </div>
       </td>

@@ -6,7 +6,7 @@ function Modals_2({
   setModal2,
 }) {
   console.log(selectedEvent);
-  
+
   return (
     <div
       id="default-modal"
@@ -27,13 +27,17 @@ function Modals_2({
           </button>
         </div>
         <div className="mt-4 overflow-y-scroll h-60 p-1">
+          {selectedEvent.image ? (
             <img
               src={selectedEvent.image}
               alt="Image"
               width={"100%"}
               className="h-40 mb-2 rounded-lg"
             />
-   
+          ) : (
+            ""
+          )}
+
           <h4 className="bg-slate-900 rounded p-2 mb-2 border-2 border-[#4caf50]">
             <strong>Event : </strong> {selectedEvent.saintName}
           </h4>
@@ -49,7 +53,6 @@ function Modals_2({
           <p className="bg-slate-900 p-2 rounded mb-2 border-2 border-[#4caf50]">
             <strong>Introduction : </strong> {selectedEvent.introduction}
           </p>
-         
         </div>
         <div className="mt-4 text-right">
           <button

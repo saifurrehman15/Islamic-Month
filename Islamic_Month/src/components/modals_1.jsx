@@ -43,7 +43,7 @@ function Modals_1({ selectedBox, selectedMonth, setModal }) {
         aria-hidden="true"
         className="fixed inset-0 z-50 flex items-center justify-center w-full h-full bg-opacity-50 text-white"
       >
-        <div className="bg-gray-800 shadow-black rounded-lg shadow-lg border border-[gray] max-w-lg w-full p-6">
+        <div className="bg-gray-800 shadow-black rounded-lg shadow-lg border border-[gray] max-w-lg w-full p-6 m-2">
           <div className="flex justify-between items-center border-b pb-3">
             <h3 className="text-lg font-semibold">
               {selectedBox} {months[selectedMonth]}

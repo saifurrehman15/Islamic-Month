@@ -5,7 +5,7 @@ function NavigationBar({ selectedMonth, setMonth, months,year }) {
         <h1 className="text-white"> ISLAMIC HIJRI</h1>
       </div>
       <div >
-       <h1 className="text-white ms-[30px]"> {months[selectedMonth]} {year}</h1>
+       <h1 className="text-white ms-[30px]"> {months[selectedMonth]}</h1>
       </div>
       <div className="text-white font-semibold select-container">
         <span className="me-2"> Select Month</span>

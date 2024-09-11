@@ -16,6 +16,7 @@ function InputsGroups({
         onchange={(e) => {
           setName(e.target.value);
         }}
+        className="inputs-modal"
       />
 
       <Inputs
@@ -40,7 +41,8 @@ function InputsGroups({
         }}
       />
       <Inputs
-      placeholder={"مزار کی تصویر(Optional)"}
+      type={"text"}
+      placeholder={"تعارف"}
       onchange={(e)=>{
         setIntro(e.target.value)
       }}
@@ -87,7 +89,7 @@ function InputsGroups({
       </div> */}
       <Inputs 
       type={'url'}
-      placeholder={"مزار کی تصویر اپ لوڈ کریں۔"}
+      placeholder={"مزار کی تصویر(Optional)"}
       onchange={(e) => {
         setTombImg(e.target.value);
       }}

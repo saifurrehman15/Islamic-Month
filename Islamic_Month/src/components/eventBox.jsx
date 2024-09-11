@@ -56,7 +56,7 @@ function Events(props) {
                 setBox(day);
                 setModal3(true);
               }}
-              className="cursor-pointer hover:bg-gray-600 hover:text-white rounded w-5 h-5 flex items-center justify-center absolute top-0 right-1"
+              className={screen.width<992?"cursor-pointer hover:bg-gray-600 hover:text-white rounded w-5 h-5 flex items-center justify-center absolute top-0 left-5":"cursor-pointer hover:bg-gray-600 hover:text-white rounded w-5 h-5 flex items-center justify-center absolute top-0 right-1"}
             >
               {screen.width < 992 ? (
                 <span
